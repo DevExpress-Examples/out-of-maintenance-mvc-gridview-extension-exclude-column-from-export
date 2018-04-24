@@ -1,24 +1,23 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
+Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
-
-' Review the values of the assembly attributes
-<Assembly: AssemblyTitle("GridView.BeforeExport")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("GridView.BeforeExport")> 
-<Assembly: AssemblyCopyright("Copyright ©  2011")> 
-<Assembly: AssemblyTrademark("")> 
-
+<Assembly: AssemblyTitle("DevExpress.Razor")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyConfiguration("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("DevExpress.Razor")>
+<Assembly: AssemblyCopyright("Copyright ©  2011")>
+<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyCulture("")>
+' Setting ComVisible to false makes the types in this assembly not visible 
+' to COM components.  If you need to access a type in this assembly from 
+' COM, set the ComVisible attribute to true on that type.
 <Assembly: ComVisible(False)>
-
 ' The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("98dfeedb-0614-4471-970a-a189e2341fcb")> 
-
+<Assembly: Guid("bbbb4e71-166f-4f4f-b2b5-bfeb24851d01")>
 ' Version information for an assembly consists of the following four values:
 '
 '      Major Version
@@ -26,9 +25,7 @@ Imports System.Runtime.InteropServices
 '      Build Number
 '      Revision
 '
-' You can specify all the values or you can default the Build and Revision Numbers 
+' You can specify all the values or you can default the Revision and Build Numbers 
 ' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")> 
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>

@@ -1,32 +1,35 @@
-﻿' Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-' visit http://go.microsoft.com/?LinkId=9394802
+﻿Imports System
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Web
 
-Public Class MvcApplication
-    Inherits System.Web.HttpApplication
+Namespace DevExpress.Razor
+    ' Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+    ' visit http://go.microsoft.com/?LinkId=9394801
 
-    Shared Sub RegisterGlobalFilters(ByVal filters As GlobalFilterCollection)
-        filters.Add(New HandleErrorAttribute())
-    End Sub
+    Public Class MvcApplication
+        Inherits System.Web.HttpApplication
 
-    Shared Sub RegisterRoutes(ByVal routes As RouteCollection)
-        routes.IgnoreRoute("{resource}.axd/{*pathInfo}")
+        Public Shared Sub RegisterGlobalFilters(ByVal filters As GlobalFilterCollection)
+            filters.Add(New HandleErrorAttribute())
+        End Sub
 
-        ' MapRoute takes the following parameters, in order:
-        ' (1) Route name
-        ' (2) URL with parameters
-        ' (3) Parameter defaults
-        routes.MapRoute( _
-            "Default", _
-            "{controller}/{action}/{id}", _
-            New With {.controller = "Home", .action = "Index", .id = UrlParameter.Optional} _
-        )
+        Public Shared Sub RegisterRoutes(ByVal routes As RouteCollection)
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}")
 
-    End Sub
+            routes.MapRoute("Default", "{controller}/{action}/{id}", New With { _
+                Key .controller = "Home", _
+                Key .action = "Index", _
+                Key .id = UrlParameter.Optional _
+            })
 
-    Sub Application_Start()
-        AreaRegistration.RegisterAllAreas()
+        End Sub
 
-        RegisterGlobalFilters(GlobalFilters.Filters)
-        RegisterRoutes(RouteTable.Routes)
-    End Sub
-End Class
+        Protected Sub Application_Start()
+            AreaRegistration.RegisterAllAreas()
+
+            RegisterGlobalFilters(GlobalFilters.Filters)
+            RegisterRoutes(RouteTable.Routes)
+        End Sub
+    End Class
+End Namespace
