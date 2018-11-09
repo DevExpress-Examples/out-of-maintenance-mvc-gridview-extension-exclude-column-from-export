@@ -66,15 +66,3 @@ textarea
 {
     display: none;
 }
-
-.templateTable {
-	border-collapse: collapse;
-    width: 100%;
-}
-.templateTable td {
-	border: solid 1px #C2C2C2;
-	padding: 2px;
-}
-.templateCaption td.caption {
-	background: #ECF2F3;
-}    
